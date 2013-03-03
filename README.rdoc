@@ -1,6 +1,26 @@
-= splintable
+= Splintable
 
-Description goes here.
+Splintable is a simple readable ruby component similar to Pocket and Readability.
+
+## Install
+
+Add to Gemfile
+
+    gem 'splintable', git: 'https://github.com/sandboxws/splintable.git'
+
+## Usage
+
+    # build the readable object
+    readable = Splintable.readable 'http://tnw.to/r1p7'
+
+    readable.title
+    # => the title of the webpage
+    readable.description
+    # => the inner text of the first paragraph of the main content of this link
+    readable.images
+    # => a hash of images links grouped under two keys, "cover_image" and "post"
+    readable.raw_content
+    # => Display HTML raw content of the main content of this link which is the article itself
 
 == Contributing to splintable
  
