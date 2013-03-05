@@ -113,6 +113,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/related/)
           node.remove if node['class'] && node['class'].match(/related-posts/)
           node.remove if node['class'] && node['class'].match(/pagination/)
+          node.remove if node['class'] && node['class'].match(/prevnext/)
           node.remove if node['class'] && node['class'].match(/paging/)
           node.remove if node['class'] && node['class'].match(/module-crunchbase/)
           node.remove if node['class'] && node['class'].match(/\bad\b/)
