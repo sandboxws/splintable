@@ -25,6 +25,7 @@ module Splintable
         @content = @page.at('div.article') if @content.nil?
         @content.search('.date-outer').remove
         @content.search('.post-header').remove
+        @content.search('.post-footer').remove
         @content.search('.article-header').remove
         @content.search('.article-footer').remove
 
