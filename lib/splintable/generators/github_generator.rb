@@ -7,6 +7,7 @@ module Splintable
 
       def get_content
         @content = @page.at('#readme')
+        @content = @page.at('.container') if @content.nil?
         @content.search('h1:first').remove
         @content.search('span.name').remove
 
@@ -16,7 +17,7 @@ module Splintable
       def get_description
         super
         if @description.nil? || @description.empty?
-          @description = @page.at('#repository_description').inner_text
+          @description = !@page.at('#repository_description').nil? ? @page.at('#repository_description').inner_text : nil
         end
       end
     end
