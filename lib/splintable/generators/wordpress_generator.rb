@@ -43,6 +43,7 @@ module Splintable
         @content.search('.post_page_navigation').remove
         @content.search('.post-meta').remove
         @content.search('.homepage-widget').remove
+        @content.search('.post-heading').remove
 
         super
       end
