@@ -133,6 +133,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/entryExtra/)
           node.remove if node['class'] && node['class'].match(/social_bookmarking_module/)
           node.remove if node['class'] && node['class'].match(/newsletterPost/)
+          node.remove if node['class'] && node['class'].match(/printfriendly/)
           node.remove if node['style'] && node['style'].match(/display:\s?none/)
           node.remove if node['style'] && node['style'].match(/clear: both;/)
           node.remove if node['id'] && node['id'].match(/share-post/)
