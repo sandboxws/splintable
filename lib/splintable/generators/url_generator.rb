@@ -44,6 +44,7 @@ module Splintable
           'Lifehacker',
           'TheNextWeb',
           'Github',
+          'Blogger',
           'WordpressDotCom',
           'Wordpress',
           'Generic',
