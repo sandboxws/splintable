@@ -23,6 +23,7 @@ module Splintable
       def get_content
         @content = @page.at('div.post')
         @content = @page.at('div.article') if @content.nil?
+        @content = @page.at('div.posts-wrap') if @content.nil?
         @content.search('.date-outer').remove
         @content.search('.post-header').remove
         @content.search('.post-footer').remove
