@@ -99,9 +99,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/social4i/)
           node.remove if node['class'] && node['class'].match(/socialbox/)
           node.remove if node['class'] && node['class'].match(/socialbox-container/)
-          node.remove if node['class'] && node['class'].match(/share/)
           node.remove if node['class'] && node['class'].match(/seperator/)
-          node.remove if node['class'] && node['class'].match(/related/)
           node.remove if node['class'] && node['class'].match(/first_ad/)
           node.remove if node['class'] && node['class'].match(/subscribe/)
           node.remove if node['class'] && node['class'].match(/comments-section/)
@@ -113,6 +111,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/post-meta/)
           node.remove if node['class'] && node['class'].match(/share/)
           node.remove if node['class'] && node['class'].match(/related/)
+          node.remove if node['class'] && node['class'].match(/related-posts/)
           node.remove if node['class'] && node['class'].match(/pagination/)
           node.remove if node['class'] && node['class'].match(/paging/)
           node.remove if node['class'] && node['class'].match(/module-crunchbase/)
@@ -121,6 +120,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/\badvertisement\b/)
           node.remove if node['class'] && node['class'].match(/twitter-follow-button/)
           node.remove if node['class'] && node['class'].match(/social_heading/)
+          node.remove if node['class'] && node['class'].match(/breadcrumb/)
           node.remove if node['class'] && node['class'].match(/breadcrumbs/)
           node.remove if node['class'] && node['class'].match(/wprp_wrapper/)
           node.remove if node['class'] && node['class'].match(/post_taxonomy/)
@@ -146,6 +146,7 @@ module Splintable
           node.remove if node['id'] && node['id'].match(/reply/)
           node.remove if node['id'] && node['id'].match(/comments/)
           node.remove if node['id'] && node['id'].match(/scrollbarbox/)
+          node.remove if node['id'] && node['id'].match(/related-posts/)
           node.remove if node['id'] && node['id'] == 'footer'
           node.remove if node.name == 'script'
           node.remove if node.name == 'rdf'
