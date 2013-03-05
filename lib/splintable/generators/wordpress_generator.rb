@@ -32,6 +32,7 @@ module Splintable
         @content = @page.at('article') if @content.nil?
         @content = @page.at('.boxLeft') if @content.nil?
         @content = @page.at('div#main') if @content.nil?
+        @content = @page.at('div.article-single') if @content.nil?
 
         @content.search('h1:first').remove
         @content.search('h2:first').remove
