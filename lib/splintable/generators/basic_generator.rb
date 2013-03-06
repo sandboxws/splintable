@@ -138,6 +138,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/social_bookmarking_module/)
           node.remove if node['class'] && node['class'].match(/newsletterPost/)
           node.remove if node['class'] && node['class'].match(/printfriendly/)
+          node.remove if node['class'] && node['class'].match(/ts-fab-wrapper/)
           node.remove if node['style'] && node['style'].match(/display:\s?none/)
           node.remove if node['style'] && node['style'].match(/clear: both;/)
           node.remove if node['id'] && node['id'].match(/share-post/)
@@ -153,12 +154,14 @@ module Splintable
           node.remove if node['id'] && node['id'].match(/comments/)
           node.remove if node['id'] && node['id'].match(/scrollbarbox/)
           node.remove if node['id'] && node['id'].match(/related-posts/)
+          node.remove if node['id'] && node['id'].match(/ts-fab-below/)
           node.remove if node['id'] && node['id'] == 'footer'
           node.remove if node.name == 'script'
           node.remove if node.name == 'rdf'
           node.remove if node.name == 'footer'
           node.remove if node.name == 'aside'
           node.remove if node.name == 'a' && node['href'] && node['href'].match(/addtoany/)
+          node.remove if node.name == 'a' && node['href'] && node['href'].match(/bs.serving-sys.com/)
           node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/facebook/)
           node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/instapaper/)
           node.remove if node.text.match(/comments/i) && ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].include?(node.name)
@@ -168,8 +171,6 @@ module Splintable
           node['height'] = '' if node['height']
           node['id'] = '' if node['id']
           node['class'] = '' if node['class']
-          #node.attributes['class'].value = '' if node.attributes['class']
-          #node.attributes['id'].value = '' if node.attributes['id']
 
           if node.name == 'pre'
             if node.attributes['class']
