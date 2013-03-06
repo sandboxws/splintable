@@ -104,6 +104,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/first_ad/)
           node.remove if node['class'] && node['class'].match(/subscribe/)
           node.remove if node['class'] && node['class'].match(/comments-section/)
+          node.remove if node['class'] && node['class'].match(/comments/)
           node.remove if node['class'] && node['class'].match(/about-section/)
           node.remove if node['class'] && node['class'].match(/about-box/)
           node.remove if node['class'] && node['class'].match(/addthis/)
