@@ -7,6 +7,7 @@ module Splintable
 
       def get_content
         @content = @page.at('.main-content')
+        @content = @page.at('article')
         @content.search('aside').remove
 
         super
