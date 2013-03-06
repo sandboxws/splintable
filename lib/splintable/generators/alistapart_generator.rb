@@ -13,7 +13,7 @@ module Splintable
       end
 
       def get_cover_image
-        wide_hero = @page.at('.wide-hero')
+        wide_hero = @page.at('figure')
         if wide_hero
           @images[:cover_image] = wide_hero.at('img')['src']
         else
