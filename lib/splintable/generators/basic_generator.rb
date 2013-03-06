@@ -139,6 +139,8 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/newsletterPost/)
           node.remove if node['class'] && node['class'].match(/printfriendly/)
           node.remove if node['class'] && node['class'].match(/ts-fab-wrapper/)
+          node.remove if node['class'] && node['class'].match(/WgtBody208/)
+          node.remove if node['class'] && node['class'].match(/WgtBorder208/)
           node.remove if node['style'] && node['style'].match(/display:\s?none/)
           node.remove if node['style'] && node['style'].match(/clear: both;/)
           node.remove if node['id'] && node['id'].match(/share-post/)
@@ -187,7 +189,7 @@ module Splintable
           if node.name == 'iframe' &&
             node.attributes['width'] &&
             node['src'] &&
-            node['src'].match(/youtube\.com|vimeo\.com|blip\.tv|viddler\.com|kickstarter\.com/)
+            node['src'].match(/youtube\.com|vimeo\.com|blip\.tv|viddler\.com|kickstarter\.com|googleads/)
             node.attributes['width'].value = '100%'
             node['class'] = 'external-vid'
           end
