@@ -28,6 +28,7 @@ module Splintable
     autoload :GithubGenerator, "splintable/generators/github_generator"
     autoload :TheNextWebGenerator, "splintable/generators/the_next_web_generator"
     autoload :AlistapartGenerator, "splintable/generators/alistapart_generator"
+    autoload :NoupeGenerator, "splintable/generators/noupe_generator"
     autoload :BloggerGenerator, "splintable/generators/blogger_generator"
     autoload :GenericGenerator, "splintable/generators/generic_generator"
   end

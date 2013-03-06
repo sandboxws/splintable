@@ -45,6 +45,7 @@ module Splintable
           'TheNextWeb',
           'Github',
           'Alistapart',
+          'Noupe',
           'Blogger',
           'WordpressDotCom',
           'Wordpress',
