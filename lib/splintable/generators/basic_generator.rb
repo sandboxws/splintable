@@ -129,6 +129,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/ct-post-next/)
           node.remove if node['class'] && node['class'].match(/entryDate/)
           node.remove if node['class'] && node['class'].match(/entryTags/)
+          node.remove if node['class'] && node['class'].match(/tag-links/)
           node.remove if node['class'] && node['class'].match(/entryCategories/)
           node.remove if node['class'] && node['class'].match(/entryExtra/)
           node.remove if node['class'] && node['class'].match(/social_bookmarking_module/)
