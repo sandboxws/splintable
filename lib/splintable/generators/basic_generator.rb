@@ -170,6 +170,9 @@ module Splintable
           node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/instapaper/)
           node.remove if node.text.match(/comments/i) && ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].include?(node.name)
           #node.remove if node.text.size == 0 && node.text.blank? && node.children.size == 0
+
+          node.remove if node.name == 'br'
+
           node['onclick'] = '' if node['onclick']
           node['width'] = '' if node['width']
           node['height'] = '' if node['height']
