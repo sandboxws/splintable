@@ -175,7 +175,7 @@ module Splintable
             text = node.text
             if text
               text.strip!
-              node.remove if text.empty?
+              node.remove if text.empty? && node.children.size == 0
             end
           end
           node.remove if node.text.match(/comments/i) && ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].include?(node.name)
