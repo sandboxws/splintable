@@ -46,6 +46,7 @@ module Splintable
           'Github',
           'Alistapart',
           'Noupe',
+          'Sitepoint',
           'Blogger',
           'WordpressDotCom',
           'Wordpress',
