@@ -101,7 +101,6 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/socialbox-container/)
           node.remove if node['class'] && node['class'].match(/socialmedia/)
           node.remove if node['class'] && node['class'].match(/seperator/)
-          node.remove if node['class'] && node['class'].match(/first_ad/)
           node.remove if node['class'] && node['class'].match(/subscribe/)
           node.remove if node['class'] && node['class'].match(/comments-section/)
           node.remove if node['class'] && node['class'].match(/comments/)
@@ -119,6 +118,8 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/prevnext/)
           node.remove if node['class'] && node['class'].match(/paging/)
           node.remove if node['class'] && node['class'].match(/module-crunchbase/)
+          node.remove if node['class'] && node['class'].match(/first_ad/)
+          node.remove if node['class'] && node['class'].match(/post_ad/)
           node.remove if node['class'] && node['class'].match(/\bad\b/)
           node.remove if node['class'] && node['class'].match(/\badv\b/)
           node.remove if node['class'] && node['class'].match(/\badvertisement\b/)
@@ -164,14 +165,16 @@ module Splintable
           node.remove if node.name == 'rdf'
           node.remove if node.name == 'footer'
           node.remove if node.name == 'aside'
+          node.remove if node.name == 'br'
           node.remove if node.name == 'a' && node['href'] && node['href'].match(/addtoany/)
           node.remove if node.name == 'a' && node['href'] && node['href'].match(/bs.serving-sys.com/)
           node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/facebook/)
           node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/instapaper/)
+
+          node.remove if node.text == '&nbsp;'
           node.remove if node.text.match(/comments/i) && ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].include?(node.name)
           #node.remove if node.text.size == 0 && node.text.blank? && node.children.size == 0
 
-          node.remove if node.name == 'br'
 
           node['onclick'] = '' if node['onclick']
           node['width'] = '' if node['width']
