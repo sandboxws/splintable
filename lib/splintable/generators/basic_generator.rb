@@ -171,7 +171,13 @@ module Splintable
           node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/facebook/)
           node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/instapaper/)
 
-          node.remove if node.text == '&nbsp;'
+          if node.name == 'p'
+            text = node.text
+            if text
+              text.strip!
+              node.remove if text.empty?
+            end
+          end
           node.remove if node.text.match(/comments/i) && ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].include?(node.name)
           #node.remove if node.text.size == 0 && node.text.blank? && node.children.size == 0
 
