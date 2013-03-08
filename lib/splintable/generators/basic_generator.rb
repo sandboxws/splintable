@@ -57,11 +57,11 @@ module Splintable
 
       def get_cover_image
         fb_image = @page.at('meta[@property="og:image"]')
-        fb_image_size = FastImage.size(fb_image[:content], { raise_on_failure: false, timeout: 3 }) if fb_image
+        fb_image_size = FastImage.size(URI.encode(fb_image[:content]), { raise_on_failure: false, timeout: 3 }) if fb_image
         fb_image_size = [] if fb_image_size.nil?
 
         meta_image = @page.at('link[@rel="image_src"]')
-        meta_image_size = FastImage.size(meta_image[:href], { raise_on_failure: false, timeout: 3 }) if meta_image
+        meta_image_size = FastImage.size(URI.encode(meta_image[:href]), { raise_on_failure: false, timeout: 3 }) if meta_image
         meta_image_size = [] if meta_image_size.nil?
 
         if fb_image_size && fb_image_size.size == 2 && fb_image_size[0] >= IMAGE_WIDTH
@@ -76,7 +76,7 @@ module Splintable
       def get_post_images
         @content.search('img').each do |img|
           puts ">>> #{img[:src]}"
-          image_size = FastImage.size(img[:src], {
+          image_size = FastImage.size(URI.encode(img[:src]), {
             raise_on_failure: false, timeout: 3
           }) if img[:src] && img[:src].match(/^http/)
           @images[:post] << img['src'] if image_size && image_size.size == 2 && image_size[0] >= IMAGE_WIDTH
