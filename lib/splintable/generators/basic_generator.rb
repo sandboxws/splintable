@@ -145,6 +145,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/WgtBody208/)
           node.remove if node['class'] && node['class'].match(/WgtBorder208/)
           node.remove if node['class'] && node['class'].match(/WgtBorder208/)
+          node.remove if node['class'] && node['class'].match(/theSinglePostMetabox/)
           node.remove if node['class'] && node['class'].match(/scribol/)
           node.remove if node['style'] && node['style'].match(/display:\s?none/)
           node.remove if node['style'] && node['style'].match(/clear: both;/)
