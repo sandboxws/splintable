@@ -30,6 +30,7 @@ module Splintable
     autoload :AlistapartGenerator, "splintable/generators/alistapart_generator"
     autoload :NoupeGenerator, "splintable/generators/noupe_generator"
     autoload :SitepointGenerator, "splintable/generators/sitepoint_generator"
+    autoload :VeerleGenerator, "splintable/generators/veerle_generator"
     autoload :BloggerGenerator, "splintable/generators/blogger_generator"
     autoload :GenericGenerator, "splintable/generators/generic_generator"
   end

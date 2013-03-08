@@ -47,6 +47,7 @@ module Splintable
           'Alistapart',
           'Noupe',
           'Sitepoint',
+          'Veerle',
           'Blogger',
           'WordpressDotCom',
           'Wordpress',
