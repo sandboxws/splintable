@@ -149,6 +149,7 @@ module Splintable
           node.remove if node['style'] && node['style'].match(/display:\s?none/)
           node.remove if node['style'] && node['style'].match(/clear: both;/)
           node.remove if node['id'] && node['id'].match(/share-post/)
+          node.remove if node['id'] && node['id'].match(/sharebar/)
           node.remove if node['id'] && node['id'].match(/wdshare-share-box/)
           node.remove if node['id'] && node['id'].match(/wdsb-share-box/)
           node.remove if node['id'] && node['id'].match(/postinfo/)
