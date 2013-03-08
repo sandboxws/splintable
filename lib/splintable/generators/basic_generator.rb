@@ -176,8 +176,6 @@ module Splintable
           node.remove if node.name == 'br'
           node.remove if node.name == 'a' && node['href'] && node['href'].match(/addtoany/)
           node.remove if node.name == 'a' && node['href'] && node['href'].match(/bs.serving-sys.com/)
-          node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/facebook/)
-          node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/instapaper/)
 
           if node.name == 'p'
             text = node.text
@@ -211,7 +209,9 @@ module Splintable
           if node.name == 'iframe' &&
             node.attributes['width'] &&
             node['src'] &&
-            node['src'].match(/youtube\.com|vimeo\.com|blip\.tv|viddler\.com|kickstarter\.com|googleads/)
+            node['src'].match(/instapaper|facebook|youtube\.com|vimeo\.com|blip\.tv|viddler\.com|kickstarter\.com|googleads/)
+            #node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/facebook/)
+            #node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/instapaper/)
             node.attributes['width'].value = '100%'
             node['class'] = 'external-vid'
           end
