@@ -147,6 +147,8 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/WgtBorder208/)
           node.remove if node['class'] && node['class'].match(/theSinglePostMetabox/)
           node.remove if node['class'] && node['class'].match(/scribol/)
+          node.remove if node['class'] && node['class'].match(/documentTags/)
+          node.remove if node['class'] && node['class'].match(/documentCreatorHistory/)
           node.remove if node['style'] && node['style'].match(/display:\s?none/)
           node.remove if node['style'] && node['style'].match(/clear: both;/)
           node.remove if node['id'] && node['id'].match(/showSomeLove/)
