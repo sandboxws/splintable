@@ -32,6 +32,7 @@ module Splintable
     autoload :SitepointGenerator, "splintable/generators/sitepoint_generator"
     autoload :VeerleGenerator, "splintable/generators/veerle_generator"
     autoload :WisebreadGenerator, "splintable/generators/wisebread_generator"
+    autoload :EntrepreneurGenerator, "splintable/generators/entrepreneur_generator"
     autoload :BloggerGenerator, "splintable/generators/blogger_generator"
     autoload :GenericGenerator, "splintable/generators/generic_generator"
   end

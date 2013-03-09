@@ -49,6 +49,7 @@ module Splintable
           'Sitepoint',
           'Veerle',
           'Wisebread',
+          'Entrepreneur',
           'Blogger',
           'WordpressDotCom',
           'Wordpress',
