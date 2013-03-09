@@ -48,6 +48,7 @@ module Splintable
           'Noupe',
           'Sitepoint',
           'Veerle',
+          'Wisebread',
           'Blogger',
           'WordpressDotCom',
           'Wordpress',

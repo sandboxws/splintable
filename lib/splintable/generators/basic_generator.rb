@@ -112,6 +112,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/wp-biographia/)
           node.remove if node['class'] && node['class'].match(/fb-recommendations/)
           node.remove if node['class'] && node['class'].match(/post-meta/)
+          node.remove if node['class'] && node['class'].match(/byline/)
           node.remove if node['class'] && node['class'].match(/share/)
           node.remove if node['class'] && node['class'].match(/related/)
           node.remove if node['class'] && node['class'].match(/related-posts/)
@@ -179,6 +180,7 @@ module Splintable
           node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/facebook/)
           node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/instapaper/)
           node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/widgets\.awe\.sm/)
+          node.remove if node.name == 'iframe' && node['src'] && node['src'].match(/widgets\.fbshare\.me/)
 
           if node.name == 'p'
             text = node.text
