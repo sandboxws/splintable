@@ -33,6 +33,7 @@ module Splintable
     autoload :VeerleGenerator, "splintable/generators/veerle_generator"
     autoload :WisebreadGenerator, "splintable/generators/wisebread_generator"
     autoload :EntrepreneurGenerator, "splintable/generators/entrepreneur_generator"
+    autoload :CodingHorrorGenerator, "splintable/generators/coding_horror_generator"
     autoload :BloggerGenerator, "splintable/generators/blogger_generator"
     autoload :GenericGenerator, "splintable/generators/generic_generator"
   end

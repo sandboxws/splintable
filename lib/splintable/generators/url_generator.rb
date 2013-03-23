@@ -50,6 +50,7 @@ module Splintable
           'Veerle',
           'Wisebread',
           'Entrepreneur',
+          'CodingHorror',
           'Blogger',
           'WordpressDotCom',
           'Wordpress',
