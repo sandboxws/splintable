@@ -8,9 +8,8 @@ module Splintable
       def get_content
         @content = @page.at('#main')
         @content = @page.at('.main') if @content.nil?
-        @content = @page.at('#content') if @content.nil?
-        @content = @page.at('.content') if @content.nil?
         @content = @page.at('.post') if @content.nil?
+        @content = @page.at('.journal-entry-text') if @content.nil?
         @content = @page.at('#post') if @content.nil?
         @content = @page.at('.post-wrap') if @content.nil?
         @content = @page.at('.post-box') if @content.nil?
@@ -21,6 +20,8 @@ module Splintable
         @content = @page.at('section.main') if @content.nil?
         @content = @page.at('section.post') if @content.nil?
         @content = @page.at('section') if @content.nil?
+        @content = @page.at('#content') if @content.nil?
+        @content = @page.at('.content') if @content.nil?
 
         @content.search('h1:first').remove
 
