@@ -126,6 +126,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/\bad\b/)
           node.remove if node['class'] && node['class'].match(/\badv\b/)
           node.remove if node['class'] && node['class'].match(/\badvertisement\b/)
+          node.remove if node['class'] && node['class'].match(/sBF_banner/)
           node.remove if node['class'] && node['class'].match(/twitter-follow-button/)
           node.remove if node['class'] && node['class'].match(/social_heading/)
           node.remove if node['class'] && node['class'].match(/breadcrumb/)
