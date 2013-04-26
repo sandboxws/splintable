@@ -7,12 +7,6 @@ module Splintable
 
       def get_content
         @content = @page.at('div.article-body')
-        @content.search('h1:first').remove
-        @content.search('.wp-about-author-containter-around').remove
-        @content.search('#sharebarx').remove
-        @content.search('#sharebar').remove
-        @content.search('#similar_posts').remove
-
         super
       end
 
