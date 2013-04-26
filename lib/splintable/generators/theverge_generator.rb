@@ -5,6 +5,11 @@ module Splintable
         @type_match = true if @url.match(/theverge.com/)
       end
 
+      def get_content
+        @content = @page.at('div.article-body')
+        super
+      end
+
       def get_cover_image
         cover_image = @page.at('div.story-image img')
         if cover_image
