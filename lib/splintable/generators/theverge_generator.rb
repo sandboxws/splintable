@@ -9,15 +9,6 @@ module Splintable
         @content = @page.at('div.article-body')
         super
       end
-
-      def get_cover_image
-        cover_image = @page.at('div.story-image img')
-        if cover_image
-          @images[:cover_image] = cover_image[:src]
-        else
-          super
-        end
-      end
     end
   end
 end
