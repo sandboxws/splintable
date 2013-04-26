@@ -16,10 +16,11 @@ module Splintable
       def init
         self.get_type
         if @type_match
+          self.get_cover_image
           self.get_content
           self.get_title
           self.get_description
-          self.get_images
+          self.get_post_images
           self.post_handling
         end
       end
@@ -94,6 +95,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/post_categories/)
           node.remove if node['class'] && node['class'].match(/post-info/)
           node.remove if node['class'] && node['class'].match(/article-info/)
+          node.remove if node['class'] && node['class'].match(/article-meta/)
           node.remove if node['class'] && node['class'].match(/meta/)
           node.remove if node['class'] && node['class'].match(/sociable/)
           node.remove if node['class'] && node['class'].match(/social4i/)
