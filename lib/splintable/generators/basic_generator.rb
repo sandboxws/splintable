@@ -94,6 +94,8 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/post-categories/)
           node.remove if node['class'] && node['class'].match(/post_categories/)
           node.remove if node['class'] && node['class'].match(/post-info/)
+          node.remove if node['class'] && node['class'].match(/post-footer-actions/)
+          node.remove if node['class'] && node['class'].match(/post-author-bottom/)
           node.remove if node['class'] && node['class'].match(/article-info/)
           node.remove if node['class'] && node['class'].match(/article-meta/)
           node.remove if node['class'] && node['class'].match(/meta/)
