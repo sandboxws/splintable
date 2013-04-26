@@ -35,6 +35,7 @@ module Splintable
     autoload :EntrepreneurGenerator, "splintable/generators/entrepreneur_generator"
     autoload :CodingHorrorGenerator, "splintable/generators/coding_horror_generator"
     autoload :BloggerGenerator, "splintable/generators/blogger_generator"
+    autoload :ThevergeGenerator, "splintable/generators/theverge_generator"
     autoload :GenericGenerator, "splintable/generators/generic_generator"
   end
 end

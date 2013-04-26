@@ -52,6 +52,7 @@ module Splintable
           'Entrepreneur',
           'CodingHorror',
           'Blogger',
+          'Theverge',
           'WordpressDotCom',
           'Wordpress',
           'Generic',
