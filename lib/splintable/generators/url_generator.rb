@@ -54,6 +54,7 @@ module Splintable
           'Blogger',
           'Theverge',
           'Androidpit',
+          'Androidpolice',
           'WordpressDotCom',
           'Wordpress',
           'Generic',
