@@ -53,6 +53,7 @@ module Splintable
           'CodingHorror',
           'Blogger',
           'Theverge',
+          'Androidpit',
           'WordpressDotCom',
           'Wordpress',
           'Generic',

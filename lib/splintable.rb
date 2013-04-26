@@ -36,6 +36,7 @@ module Splintable
     autoload :CodingHorrorGenerator, "splintable/generators/coding_horror_generator"
     autoload :BloggerGenerator, "splintable/generators/blogger_generator"
     autoload :ThevergeGenerator, "splintable/generators/theverge_generator"
+    autoload :AndroidpitGenerator, "splintable/generators/androidpit_generator"
     autoload :GenericGenerator, "splintable/generators/generic_generator"
   end
 end
