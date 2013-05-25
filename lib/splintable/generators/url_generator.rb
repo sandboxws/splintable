@@ -31,6 +31,7 @@ module Splintable
 
       def generators
         [
+          'BusinessInsider',
           'Smashingmagazine',
           'Andrewchen',
           'Appstorm',

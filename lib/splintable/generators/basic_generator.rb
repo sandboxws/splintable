@@ -14,6 +14,7 @@ module Splintable
       end
 
       def init
+        self.preprocess_url
         self.get_type
         if @type_match
           self.get_cover_image
@@ -23,6 +24,10 @@ module Splintable
           self.get_post_images
           self.post_handling
         end
+      end
+
+      def preprocess_url
+        puts '>>>> super'
       end
 
       def get_type
