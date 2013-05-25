@@ -10,6 +10,7 @@ module Splintable
       end
 
       def get_readable
+        self.preprocess_url
         self.scrap_content
         self.generators.each do |gen|
           generator = eval("Splintable::Generators::#{gen}Generator").new(@url, @page)
@@ -22,6 +23,17 @@ module Splintable
         end
 
         @readable
+      end
+
+
+      def preprocess_url
+        if @url.match(/businessinsider.com/)
+          if @url.match /\?/
+            @url += '&op=1'
+          else
+            @url += '?op=1'
+          end
+        end
       end
 
       def scrap_content
