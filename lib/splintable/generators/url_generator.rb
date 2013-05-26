@@ -68,6 +68,7 @@ module Splintable
           'Theverge',
           'Androidpit',
           'Androidpolice',
+          'ReadWrite',
           'WordpressDotCom',
           'Wordpress',
           'Generic',
