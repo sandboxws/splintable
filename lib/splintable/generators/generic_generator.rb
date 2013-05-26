@@ -14,6 +14,7 @@ module Splintable
         @content = @page.at('.post-content') if @content.nil?
         @content = @page.at('.post-body') if @content.nil?
         @content = @page.at('.article') if @content.nil?
+        @content = @page.at('article') if @content.nil?
         @content = @page.at('.page-body') if @content.nil?
         @content = @page.at('section.content') if @content.nil?
         @content = @page.at('section.container') if @content.nil?
