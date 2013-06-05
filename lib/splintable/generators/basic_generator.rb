@@ -87,6 +87,7 @@ module Splintable
       def remove_common_nodes
         @page.search('*').each do |node|
           node.remove if node['class'] && node['class'].match(/sidebar/i)
+          node.remove if node['class'] && node['class'].match(/boilerplate/i)
           node.remove if node['class'] && node['class'].match(/title/i)
           node.remove if node['class'] && node['class'].match(/post_head/i)
           node.remove if node['class'] && node['class'].match(/post_type/i)
@@ -146,7 +147,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/ct-post-prev/i)
           node.remove if node['class'] && node['class'].match(/ct-post-next/i)
           node.remove if node['class'] && node['class'].match(/entryDate/i)
-          node.remove if node['class'] && node['class'].match(/entryTags/i)
+          node.remove if node['class'] && node['class'].match(/tags/i)
           node.remove if node['class'] && node['class'].match(/tag-links/i)
           node.remove if node['class'] && node['class'].match(/entryCategories/i)
           node.remove if node['class'] && node['class'].match(/entryExtra/i)
@@ -160,10 +161,10 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/WgtBorder208/i)
           node.remove if node['class'] && node['class'].match(/theSinglePostMetabox/i)
           node.remove if node['class'] && node['class'].match(/scribol/i)
-          node.remove if node['class'] && node['class'].match(/documentTags/i)
           node.remove if node['class'] && node['class'].match(/documentCreatorHistory/i)
           node.remove if node['style'] && node['style'].match(/display:\s?none/)
           node.remove if node['style'] && node['style'].match(/clear: both;/)
+          node.remove if node['id'] && node['id'].match(/tags/i)
           node.remove if node['id'] && node['id'].match(/showSomeLove/)
           node.remove if node['id'] && node['id'].match(/author/i)
           node.remove if node['id'] && node['id'].match(/share-post/i)

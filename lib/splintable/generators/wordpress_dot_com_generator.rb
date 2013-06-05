@@ -13,6 +13,7 @@ module Splintable
 
       def get_content
         @content = @page.at('article.post')
+        @content = @page.at('div.entry-content') if @content.nil?
         @content = @page.at('div.post') if @content.nil?
         @content = @page.at('div.entry') if @content.nil?
         @content = @page.at('div#single') if @content.nil?
