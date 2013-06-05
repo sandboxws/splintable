@@ -12,7 +12,8 @@ module Splintable
       end
 
       def get_content
-        @content = @page.at('div.entry')
+        @content = @page.at('div#content')
+        @content = @page.at('div.entry') if @content.nil?
         @content = @page.at('div#single') if @content.nil?
         @content = @page.at('.post-box') if @content.nil?
         @content = @page.at('div#content') if @content.nil?
