@@ -7,6 +7,7 @@ module Splintable
 
       def get_content
         @content = @page.at('div.post-content')
+        @content.search('.other-collections').remove
 
         super
       end
