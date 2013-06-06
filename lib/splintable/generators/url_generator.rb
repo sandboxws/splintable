@@ -69,6 +69,7 @@ module Splintable
           'Androidpit',
           'Androidpolice',
           'ReadWrite',
+          'Medium',
           'WordpressDotCom',
           'Wordpress',
           'Generic',

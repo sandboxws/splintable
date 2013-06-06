@@ -40,6 +40,7 @@ module Splintable
     autoload :AndroidpoliceGenerator, "splintable/generators/androidpolice_generator"
     autoload :BusinessInsiderGenerator, "splintable/generators/business_insider_generator"
     autoload :ReadWriteGenerator, "splintable/generators/read_write_generator"
+    autoload :MediumGenerator, "splintable/generators/medium_generator"
     autoload :GenericGenerator, "splintable/generators/generic_generator"
   end
 end
