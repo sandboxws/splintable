@@ -42,6 +42,7 @@ module Splintable
     autoload :ReadWriteGenerator, "splintable/generators/read_write_generator"
     autoload :MediumGenerator, "splintable/generators/medium_generator"
     autoload :TechnoratiGenerator, "splintable/generators/technorati_generator"
+    autoload :ForbesGenerator, "splintable/generators/forbes_generator"
     autoload :GenericGenerator, "splintable/generators/generic_generator"
   end
 end

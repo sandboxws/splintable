@@ -71,6 +71,7 @@ module Splintable
           'ReadWrite',
           'Medium',
           'Technorati',
+          'Forbes',
           'WordpressDotCom',
           'Wordpress',
           'Generic',
