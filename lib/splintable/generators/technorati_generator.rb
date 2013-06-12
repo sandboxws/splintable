@@ -7,6 +7,7 @@ module Splintable
 
       def get_content
         @content = @page.at('#article-body')
+        @content.search('h1').remove
         @content.search('div.emphasis').remove
         @content.search('#article-metadata').remove
         @content.search('#likebuttonarea').remove
