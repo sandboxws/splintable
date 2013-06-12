@@ -70,6 +70,7 @@ module Splintable
           'Androidpolice',
           'ReadWrite',
           'Medium',
+          'Technorati',
           'WordpressDotCom',
           'Wordpress',
           'Generic',
