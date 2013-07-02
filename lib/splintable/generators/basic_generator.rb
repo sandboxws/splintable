@@ -3,6 +3,7 @@ module Splintable
     class BasicGenerator
       IMAGE_WIDTH = 400
       attr_reader :page, :url,
+        :author_name, :author_url,
         :content, :raw_content,
         :title, :description,
         :images, :type_match
@@ -16,6 +17,7 @@ module Splintable
       def init
         self.get_type
         if @type_match
+          self.get_author_info
           self.get_cover_image
           self.get_content
           self.get_title
@@ -33,27 +35,12 @@ module Splintable
         @type_match
       end
 
-      def get_title
-        @title = @page.title
-      end
-
-      def get_description
-        @content.search('p').each do |p|
-          if p && p.inner_text && !p.inner_text.empty? && p.inner_text.size > 100
-            @description = p.inner_text.gsub(/\n/, '<br>')
-            break
-          end
+      def get_author_info
+        author = @page.at('a[@rel="author"]')
+        if author
+          @author_name = author.text
+          @author_url = author[:href]
         end
-      end
-
-      def get_content
-        self.remove_common_nodes
-        @raw_content = @content.to_s
-      end
-
-      def get_images
-        self.get_post_images
-        self.get_cover_image
       end
 
       def get_cover_image
@@ -72,6 +59,29 @@ module Splintable
         else
           @images[:cover_image] = @images[:post].first
         end
+      end
+
+      def get_content
+        self.remove_common_nodes
+        @raw_content = @content.to_s
+      end
+
+      def get_title
+        @title = @page.title
+      end
+
+      def get_description
+        @content.search('p').each do |p|
+          if p && p.inner_text && !p.inner_text.empty? && p.inner_text.size > 100
+            @description = p.inner_text.gsub(/\n/, '<br>')
+            break
+          end
+        end
+      end
+
+      def get_images
+        self.get_post_images
+        self.get_cover_image
       end
 
       def get_post_images
@@ -97,10 +107,7 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/post_categories/i)
           node.remove if node['class'] && node['class'].match(/post-info/i)
           node.remove if node['class'] && node['class'].match(/post-footer-actions/i)
-          node.remove if node['class'] && node['class'].match(/author/i)
           node.remove if node['class'] && node['class'].match(/article-info/i)
-          node.remove if node['class'] && node['class'].match(/article-meta/i)
-          node.remove if node['class'] && node['class'].match(/meta/)
           ['twitter', 'facebook', 'pinterest',
            'linkedin', 'googleplus', 'stumbleupon'].each do |sn|
             node.remove if node['class'] && node['class'].match(/#{sn}/i)
@@ -115,13 +122,10 @@ module Splintable
           node.remove if node['class'] && node['class'].match(/comments-section/i)
           node.remove if node['class'] && node['class'].match(/comments/i)
           node.remove if node['class'] && node['class'].match(/commentwrap/i)
-          node.remove if node['class'] && node['class'].match(/about-section/i)
-          node.remove if node['class'] && node['class'].match(/about-box/i)
           node.remove if node['class'] && node['class'].match(/addthis/i)
           node.remove if node['class'] && node['class'].match(/fb_iframe_widget/i)
           node.remove if node['class'] && node['class'].match(/wp-biographia/i)
           node.remove if node['class'] && node['class'].match(/fb-recommendations/i)
-          node.remove if node['class'] && node['class'].match(/post-meta/i)
           node.remove if node['class'] && node['class'].match(/byline/i)
           node.remove if node['class'] && node['class'].match(/share/i)
           node.remove if node['class'] && node['class'].match(/sharing/i)
@@ -166,7 +170,6 @@ module Splintable
           node.remove if node['style'] && node['style'].match(/clear: both;/)
           node.remove if node['id'] && node['id'].match(/tags/i)
           node.remove if node['id'] && node['id'].match(/showSomeLove/)
-          node.remove if node['id'] && node['id'].match(/author/i)
           node.remove if node['id'] && node['id'].match(/share-post/i)
           node.remove if node['id'] && node['id'].match(/wdshare-share-box/i)
           node.remove if node['id'] && node['id'].match(/wdsb-share-box/i)
