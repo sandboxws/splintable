@@ -44,7 +44,7 @@ module Splintable
 
         if author.nil?
           @page.search('meta').each do |e|
-            if e[:name] && e[:name].match(/authot/i)
+            if e[:name] && e[:name].match(/author/i)
               @author_name = e[:content]
             end
           end
