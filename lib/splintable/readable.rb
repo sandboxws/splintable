@@ -1,6 +1,7 @@
 module Splintable
   class Readable
     attr_reader :content,
+      :author_name, :author_url,
       :raw_content, :title,
       :description, :images
     def initialize(generator)
