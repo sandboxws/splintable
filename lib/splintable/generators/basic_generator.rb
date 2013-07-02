@@ -41,6 +41,21 @@ module Splintable
           @author_name = author.text
           @author_url = author[:href]
         end
+
+        if author.nil?
+          @page.search('meta').each do |e|
+            if e[:name].match(/authot/i)
+              @author_name = e[:content]
+            end
+          end
+        end
+
+        if @author_url.nil?
+          url = @page.at('meta[@property="article:author"]')
+          if url
+            @author_url = url[:content]
+          end
+        end
       end
 
       def get_cover_image
