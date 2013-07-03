@@ -43,6 +43,7 @@ module Splintable
     autoload :MediumGenerator, "splintable/generators/medium_generator"
     autoload :TechnoratiGenerator, "splintable/generators/technorati_generator"
     autoload :ForbesGenerator, "splintable/generators/forbes_generator"
+    autoload :NytimesGenerator, "splintable/generators/nytimes_generator"
     autoload :GenericGenerator, "splintable/generators/generic_generator"
   end
 end

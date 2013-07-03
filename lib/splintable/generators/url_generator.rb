@@ -72,6 +72,7 @@ module Splintable
           'Medium',
           'Technorati',
           'Forbes',
+          'Nytimes',
           'WordpressDotCom',
           'Wordpress',
           'Generic',
