@@ -7,6 +7,7 @@ module Splintable
 
       def get_content
         @content = @page.at('#article > div.columnGroup')
+        @content.search('h1').remove
         @content.search('.doubleRule').remove
 
         super
