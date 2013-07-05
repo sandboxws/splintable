@@ -73,6 +73,7 @@ module Splintable
           'Technorati',
           'Forbes',
           'Nytimes',
+          'AugmentedRealityNews',
           'WordpressDotCom',
           'Wordpress',
           'Generic',

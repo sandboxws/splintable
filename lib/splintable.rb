@@ -44,6 +44,7 @@ module Splintable
     autoload :TechnoratiGenerator, "splintable/generators/technorati_generator"
     autoload :ForbesGenerator, "splintable/generators/forbes_generator"
     autoload :NytimesGenerator, "splintable/generators/nytimes_generator"
+    autoload :AugmentedRealityNewsGenerator, "splintable/generators/augmented_reality_news_generator"
     autoload :GenericGenerator, "splintable/generators/generic_generator"
   end
 end
