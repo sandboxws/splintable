@@ -7,6 +7,8 @@ module Splintable
 
       def get_content
         @content = @page.at('div.content-wrapper')
+
+        @content.search('.author-social').remove
         super
       end
     end
