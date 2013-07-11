@@ -77,7 +77,7 @@ module Splintable
       end
 
       def get_content
-        self.remove_common_nodes
+        @page = BasicGenerator.remove_common_nodes(@page)
         @raw_content = @content.to_s
       end
 
@@ -109,8 +109,8 @@ module Splintable
         end
       end
 
-      def remove_common_nodes
-        @page.search('*').each do |node|
+      def self.remove_common_nodes(page)
+        page.search('*').each do |node|
           node.remove if node['class'] && node['class'].match(/sidebar/i)
           node.remove if node['class'] && node['class'].match(/boilerplate/i)
           node.remove if node['class'] && node['class'].match(/title/i)
@@ -255,6 +255,8 @@ module Splintable
             node['src'] = node['data-lazy-src']
           end
         end
+
+        page
       end
 
       def post_handling
